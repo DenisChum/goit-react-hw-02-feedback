@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { List,Item } from './Statistic.styled'
 
 
 export default function Statistics({
@@ -10,13 +11,13 @@ total,
 positiveTotal,
 }) {
 return (
-    <ul>
-        <li>Good: {good}</li>
-        <li>Neutral: {neutral}</li>
-        <li>Bad: {bad}</li>
-        <li>Total: {total}</li>
-        <li>Positive feedback: {positiveTotal}%</li>
-    </ul>
+    <List>
+        <Item>Good: {good}</Item>
+        <Item>Neutral: {neutral}</Item>
+        <Item>Bad: {bad}</Item>
+        <Item>Total: {total}</Item>
+        <Item>Positive feedback: {positiveTotal}%</Item>
+    </List>
 );
 }
 

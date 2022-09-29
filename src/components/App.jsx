@@ -1,8 +1,12 @@
 import React, { Fragment, Component } from "react";
 import Feedback from './Feedback/Feedback'
 import SectionTitle from './SectionTitle/SectionTitle'
-import Statistics from './Statictics/Statictics'
+import Statistics from './Statistics/Statistics'
 import Notification from './Notification/Notification'
+
+// style
+import { Container } from './App.styled'
+
 
 
 class App extends Component {
@@ -35,6 +39,7 @@ state = {
     const variation = good > 0 || bad > 0 || neutral > 0;
     return (
       <Fragment>
+        <Container>
         <SectionTitle title="Please leave Feedback">
         <Feedback 
             options={this.state}
@@ -49,7 +54,8 @@ state = {
             total={this.countTotalFeedback()}
             positiveTotal={this.countPositiveFeedbackPercentage()} 
         />}
-        </SectionTitle>
+          </SectionTitle>
+          </Container>
       </Fragment>
       )
   }
